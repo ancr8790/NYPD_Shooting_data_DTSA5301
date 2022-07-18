@@ -1,5 +1,4 @@
 #NYPD Shooting Data Analysis
-NYPD Shooting Data Analysis
 Taking data from data.gov and performing analysis on New York shootings from 2006 to 2020
 
 ## 1. Importing Data
@@ -100,6 +99,7 @@ bpBoro + coord_polar("y", start = 0) + theme(axis.text = element_blank(),
         axis.ticks = element_blank(),
         panel.grid  = element_blank()) +ggtitle("NYPD reported shootings by Borough") +
   xlab(element_blank()) + ylab(element_blank()) + geom_text(aes(label = scales::percent(perc_shootingB/100)),position = position_stack(vjust = 0.5))
+![Uploading Screen Shot 2022-07-17 at 11.21.04 PM.png…]()
 
 bpRace = NYPD_Race_analyze %>%
   ggplot(aes(x = "", y = perc_shootingR, fill = VIC_RACE))+geom_bar(width = 1, stat = "identity") 
