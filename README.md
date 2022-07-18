@@ -1,6 +1,8 @@
 #NYPD Shooting Data Analysis
 Taking data from data.gov and performing analysis on New York shootings from 2006 to 2020
 
+Note: Coding output and data visualization can be seen in pdf form of report
+
 ## 1. Importing Data
 Obtain the NYPD Shooting Incident Data (historic) from Data.gov at the following url:
 
@@ -116,7 +118,6 @@ bpSex + coord_polar("y", start = 0) +theme(axis.text = element_blank(),
   xlab(element_blank()) + ylab(element_blank()) + geom_text(aes(label = scales::percent(perc_shootingS/100)),position = position_stack(vjust = 0.5))
 
 ```
-![Uploading Screen Shot 2022-07-17 at 11.21.04 PM.png…]()
 
 Now that we have had a chance to see some preliminary visualizations, some questions arise about the different demographics and their relations. I was mainly interested in the relationship of the victim's race as it pertained to the borough in which the shootings occurred. How much did the race distribution of each borough reflect the demographic of the population of each borough or of New York? If they didn't match, does that mean that a particular race is being targeted more frequently in specific boroughs? 
 
