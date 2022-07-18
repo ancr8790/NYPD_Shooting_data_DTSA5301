@@ -99,7 +99,6 @@ bpBoro + coord_polar("y", start = 0) + theme(axis.text = element_blank(),
         axis.ticks = element_blank(),
         panel.grid  = element_blank()) +ggtitle("NYPD reported shootings by Borough") +
   xlab(element_blank()) + ylab(element_blank()) + geom_text(aes(label = scales::percent(perc_shootingB/100)),position = position_stack(vjust = 0.5))
-![Uploading Screen Shot 2022-07-17 at 11.21.04 PM.png…]()
 
 bpRace = NYPD_Race_analyze %>%
   ggplot(aes(x = "", y = perc_shootingR, fill = VIC_RACE))+geom_bar(width = 1, stat = "identity") 
@@ -117,6 +116,8 @@ bpSex + coord_polar("y", start = 0) +theme(axis.text = element_blank(),
   xlab(element_blank()) + ylab(element_blank()) + geom_text(aes(label = scales::percent(perc_shootingS/100)),position = position_stack(vjust = 0.5))
 
 ```
+![Uploading Screen Shot 2022-07-17 at 11.21.04 PM.png…]()
+
 Now that we have had a chance to see some preliminary visualizations, some questions arise about the different demographics and their relations. I was mainly interested in the relationship of the victim's race as it pertained to the borough in which the shootings occurred. How much did the race distribution of each borough reflect the demographic of the population of each borough or of New York? If they didn't match, does that mean that a particular race is being targeted more frequently in specific boroughs? 
 
 Filtering out the data to show one victim race's distribution throughout different boroughs in descending count order yields us...
